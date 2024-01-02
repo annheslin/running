@@ -1,1 +1,1 @@
-web: gunicorn runninggroupguide:app
+web: gunicorn app:app
