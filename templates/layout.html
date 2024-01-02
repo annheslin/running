@@ -22,8 +22,8 @@
        <div id="content" class="container">
         {% block content %}
         <div class="center">
-        <h1>Find your NYC running group!</h1>
-        <p> Contact <strong>nycrunninggroups@gmail.com</strong> to request updates and/or add your group if it's not listed!</p>
+        <h1>Your guide to running in NYC</h1>
+        <p> Please contact <strong>nycrunninggroups@gmail.com</strong> to request updates and/or add your group if it's not listed!</p>
         <!-- Navigation menu or other header elements -->
             <button name="borough">Manhattan</button>
             <button name="borough">Brooklyn</button>
@@ -45,6 +45,8 @@
                             <th>Meet Up Information</th>
                         {% elif column == 'RecognizedOrganizations' %}
                             <th>Recognized Organizations</th>
+                        {% elif column == 'LastUpdatedDate' %}
+                        <th>Last Updated Date</th>
                         {% else %}
                             {% if column != 'id' %}
                                 <th>{{ column }}</th>
@@ -59,13 +61,22 @@
                 {% for row in group %}
                     <tr>
                         {% for column in columns %}
-                            {% if column != 'id' %}
-
-                            <td>{{ row[loop.index0] }}</td>
+                            {% if column == 'Website' %}
+                                <td>
+                                    {% if row[loop.index0] %}
+                                        <a href="{{ row[loop.index0] }}" target="_blank">{{ row[loop.index0] }}</a>
+                                    {% else %}
+                                        N/A
+                                    {% endif %}
+                                </td>
+                            {% else %}
+                                {% if column != 'id' %}
+                                    <td>{{ row[loop.index0] }}</td>
+                                {% endif %}
                             {% endif %}
                         {% endfor %}
-                    </tr>
-                {% endfor %}
+        </tr>
+    {% endfor %}
                 </tbody>
             </table>
         {% endblock %}
@@ -73,7 +84,6 @@
 
 
     <footer>
-        <p class="center">Contact <strong>nycrunninggroups@gmail.com</strong> to request updates and/or add your group if it's not listed!</p>
 
     </footer>
 

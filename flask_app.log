@@ -1,1 +1,5 @@
 An error occurred: Encountered unknown tag 'endfor'. You probably made a nesting mistake. Jinja is expecting this tag, but currently looking for 'elif' or 'else' or 'endif'. The innermost block that needs to be closed is 'if'.
+An error occurred: Could not build url for endpoint 'form'. Did you mean 'home' instead?
+An error occurred: Could not build url for endpoint 'form'. Did you mean 'home' instead?
+An error occurred: Encountered unknown tag 'endblock'. You probably made a nesting mistake. Jinja is expecting this tag, but currently looking for 'endfor' or 'else'. The innermost block that needs to be closed is 'for'.
+An error occurred: Encountered unknown tag 'endblock'. You probably made a nesting mistake. Jinja is expecting this tag, but currently looking for 'endfor' or 'else'. The innermost block that needs to be closed is 'for'.

@@ -5,4 +5,41 @@
 {% block content %}
     <h1>Form Page</h1>
     <!-- Your form content goes here -->
-{% endblock %}
+    <form> 
+   		<label for ="GroupName">Group Name: </label>
+   		<input type="text" id="GroupName" required>
+   		<br>
+
+		<label for ="borough">Borough: </label>
+   		<select name="borough" required>
+   				<option disabled selected value> -- Select a borough -- </option>
+   				<option value="theBronx">The Bronx</option>
+   				<option value="brooklyn">Brooklyn</option>
+   				<option value="manhattan">Manhattan</option>
+   				<option value="queens">Queens</option>
+   				<option value="statenIsland">StatenIsland</option>
+   		</select>
+		<br>
+
+   		<label for ="distanceRunType">Distance Run Type or Type (speed, hills, long run): </label>
+   		<input type="text" id="DistanceRunType" required>
+   		<br>
+
+   		<label for ="website">Website: </label>
+   		<input type="url" id="website" required>
+		<br>
+
+		<label for ="recognizedOrganizations">Recognized Organizations: </label>
+   			<select required>
+	   			<option disabled selected value> -- Select an option -- </option>
+	   			<option value="nyrr">NYRR recognized club</option>
+	   			<option value="nycRuns">NYC RUNS recognized club</option>
+	   			<option value="none">No affiliation</option>
+   			</select>
+   		<br>
+   		<br>
+   		<button type="submit">Submit</button>
+    </form>
+
+
+	{% endblock %}
