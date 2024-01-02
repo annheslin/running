@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}NYC Running{% endblock %}</title>
+    <!-- Additional CSS or other head elements can be included here -->
+    <!-- google font -->
+    <link href ="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" > 
+
+    <!-- Link to Bootstrap CSS   -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
+    
+    <!-- my css -->
+    <link href ="/static/styles.css" rel="stylesheet"> 
+
+    <!-- my js -->
+    <script src="/static/script.js" defer></script>
+
+</head>
+<body>
+       <div id="content" class="container">
+        {% block content %}
+        <div class="center">
+        <h1>Find your NYC running group!</h1>
+        <p> Contact <strong>nycrunninggroups@gmail.com</strong> to request updates and/or add your group if it's not listed!</p>
+        <!-- Navigation menu or other header elements -->
+            <button name="borough">Manhattan</button>
+            <button name="borough">Brooklyn</button>
+            <button name="borough">Queens</button>
+            <button name="borough">The Bronx</button>
+            <button name="borough">Staten Island</button>
+        </div>
+            <br><br>
+
+            <table class="table">
+                <thead> 
+                <tr>
+                   {% for column in columns %}
+                        {% if column == 'GroupName' %}
+                            <th>Running Group</th>
+                        {% elif column == 'DistanceRunType' %}
+                            <th>Distance Run Type</th>
+                        {% elif column == 'MeetUpInformation' %}
+                            <th>Meet Up Information</th>
+                        {% elif column == 'RecognizedOrganizations' %}
+                            <th>Recognized Organizations</th>
+                        {% else %}
+                            {% if column != 'id' %}
+                                <th>{{ column }}</th>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+        
+                </tr>
+                </thead>
+
+               <tbody>
+                {% for row in group %}
+                    <tr>
+                        {% for column in columns %}
+                            {% if column != 'id' %}
+
+                            <td>{{ row[loop.index0] }}</td>
+                            {% endif %}
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        {% endblock %}
+        </div>
+
+
+    <footer>
+        <p class="center">Contact <strong>nycrunninggroups@gmail.com</strong> to request updates and/or add your group if it's not listed!</p>
+
+    </footer>
+
+    <!-- Additional scripts or other elements can be included here -->
+
+</body>
+</html>

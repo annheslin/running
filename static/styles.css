@@ -1,0 +1,22 @@
+button {
+	border-radius: 30px;
+	font-size: 18px;
+	padding: 10px 20px;
+}
+
+body {
+	background-color: skyblue;
+}
+
+table {
+	white-space: nowrap;
+
+}
+
+th {
+	font-size: 20px;
+}
+
+.center {
+	text-align: center;
+}
