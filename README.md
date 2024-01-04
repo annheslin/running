@@ -1,21 +1,5 @@
-# repo_0 [NYC Running Guide](https://runninggroupguide-d16926f31fda.herokuapp.com/)
+# [NYC Running Guide](https://runninggroupguide-d16926f31fda.herokuapp.com/)
 
-this is a brief description of my project.
+If you're a NYC runner then you know that it can be hard to find a consolidated list of all those running groups where you can quickly filter down to the location and time you want.
 
-## table of contents
-
-- Go to [NYC Running Guide](https://runninggroupguide-d16926f31fda.herokuapp.com/)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgments](#acknowledgments)
-
-## Getting Started
-
-Provide information on how to get started with your project.
-
-### Prerequisites
-
-List any software, libraries, or other dependencies needed to run the project.
+Instead of thumbing through posts and trying to stitch the information together, view them all here: [NYC Running Guide](https://runninggroupguide-d16926f31fda.herokuapp.com/)
