@@ -1,10 +1,10 @@
-# repo_0
+# repo_0 [NYC Running Guide](https://runninggroupguide-d16926f31fda.herokuapp.com/)
 
 this is a brief description of my project.
 
 ## table of contents
 
-- [Getting Started](#getting-started)
+- Go to [NYC Running Guide](https://runninggroupguide-d16926f31fda.herokuapp.com/)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Usage](#usage)
