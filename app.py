@@ -1,4 +1,3 @@
-import csv
 from flask import Flask, render_template, g
 import logging
 from logging.handlers import RotatingFileHandler
@@ -12,10 +11,6 @@ app.config["TEMPLATES_AUTO_RELOAD"] = True # tells Flask to automatically reload
 handler = RotatingFileHandler('flask_app.log', maxBytes=10000, backupCount=1)
 handler.setLevel(logging.INFO)
 app.logger.addHandler(handler)
-
-#configure cs50 lib to use sqllite db
-conn = sqlite3.connect('nycrunning.db')
-cursor = conn.cursor()
 
 # Function to get SQLite connection
 def get_db():
