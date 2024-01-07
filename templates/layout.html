@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}NYC Running{% endblock %}</title>
     <!-- Additional CSS or other head elements can be included here -->
+    <link rel="icon" href="{{ url_for('static', filename='runner.svg') }}">
+
     <!-- google font -->
     <link href ="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" > 
 
@@ -22,8 +24,9 @@
        <div id="content" class="container">
         {% block content %}
         <div class="center">
-        <h1>Your guide to running in NYC</h1>
-        <p> Please contact <strong>nycrunninggroups@gmail.com</strong> to request updates and/or add your group if it's not listed!</p>
+        <h1>Your Running Group Guide</h1>
+        <p> It can be a struggle to find a consolidated list of NYC running groups. Instead of thumbing through endless posts and stitching the information together yourself, view them all here! </p>
+        <p> Please contact <strong>runninggroupguide@gmail.com</strong> to request updates and/or add your group if it's not listed!</p>
         <!-- Navigation menu or other header elements -->
             <button name="borough">Manhattan</button>
             <button name="borough">Brooklyn</button>
